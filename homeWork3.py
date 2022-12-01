@@ -52,7 +52,7 @@ def getFibonachi(num):
         tmp_pos = res_pos[n-2] + res_pos[n-1] if n > 1 else n
         res_pos.append(tmp_pos)
         n *= -1
-        tmp_neg = res_neg[abs(n+2)] - res_neg[abs(n+1)] if n < -1 else n
+        tmp_neg = res_neg[abs(n+2)] - res_neg[abs(n+1)] if n < -1 else abs(n)
         res_neg.append(tmp_neg)
     print(num,' -> ',res_neg[::-1] + res_pos[1:])
 
